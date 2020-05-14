@@ -10,7 +10,7 @@ Key features:
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/flask-idashboard-free.git
+$ git clone https://github.com/HimanshuMittal01/knowledge-miners.git
 $ cd flask-idashboard-free
 $
 $ # Virtualenv modules installation (Unix based systems)
