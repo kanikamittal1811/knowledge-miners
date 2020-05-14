@@ -11,7 +11,7 @@ Key features:
 ```bash
 $ # Get the code
 $ git clone https://github.com/HimanshuMittal01/knowledge-miners.git
-$ cd flask-idashboard-free
+$ cd knowledge-miners
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
