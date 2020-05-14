@@ -1,0 +1,193 @@
+
+{% extends "layouts/default.html" %}
+
+{% block title %} Widgets {% endblock title %}
+
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="page-inner">
+        <!-- Explore -->
+        <h4 class="page-title">Explore</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-round">
+                    <div class="card-header card-info text-center p-4">
+                        <div class="card-title text-capitalize"><h2>Structuring machine learning projects</h2></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row user-stats text-center">
+                            <div class="col">
+                                <h3 class="text text-light">Coursera</h3>
+                                <div class="title">Source</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">15 hrs</h3>
+                                <div class="title">Duration</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">ML</h3>
+                                <div class="title">Tag</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <div class="card-detail">
+                          <div class="btn btn-light btn-rounded">View Detail</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-round">
+                    <div class="card-header card-secondary text-center p-4">
+                        <div class="card-title text-capitalize"><h2>How to write professional emails</h2></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row user-stats text-center">
+                            <div class="col">
+                                <h3 class="text text-light">Coursera</h3>
+                                <div class="title">Source</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">10 hrs</h3>
+                                <div class="title">Duration</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">Communication</h3>
+                                <div class="title">Tag</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <div class="card-detail">
+                          <div class="btn btn-light btn-rounded">View Detail</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-round">
+                    <div class="card-header card-info text-center p-4">
+                        <div class="card-title text-capitalize"><h2>Introduction to natural language processing</h2></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row user-stats text-center">
+                            <div class="col">
+                                <h3 class="text text-light">Coursera</h3>
+                                <div class="title">Source</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">29 hrs</h3>
+                                <div class="title">Duration</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">ML</h3>
+                                <div class="title">Tag</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <div class="card-detail">
+                          <div class="btn btn-light btn-rounded">View Detail</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-round">
+                    <div class="card-header card-warning text-center p-4">
+                        <div class="card-title text-capitalize"><h2>Robotics and automation</h2></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row user-stats text-center">
+                            <div class="col">
+                                <h3 class="text text-light">Coursera</h3>
+                                <div class="title">Source</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">18 hrs</h3>
+                                <div class="title">Duration</div>
+                            </div>
+                            <div class="col">
+                                <h3 class="text text-light">Robotics</h3>
+                                <div class="title">Tag</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      <div class="card-detail">
+                          <div class="btn btn-light btn-rounded">View Detail</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block javascripts %}
+
+	<script>
+		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#177dff',
+			fillColor: 'rgba(23, 125, 255, 0.14)'
+		});
+
+		$('#lineChart2').sparkline([99,125,122,105,110,124,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#f3545d',
+			fillColor: 'rgba(243, 84, 93, .14)'
+		});
+
+		$('#lineChart3').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+
+		$('#lineChart4').sparkline([102,109,120,99,110,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+
+		$('#lineChart5').sparkline([99,125,122,105,110,124,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+
+		$('#lineChart6').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: 'rgba(255, 255, 255, .5)',
+			fillColor: 'rgba(255, 255, 255, .15)'
+		});
+	</script>
+
+{% endblock javascripts %}
