@@ -9,3 +9,16 @@ Himanshu:
     - Feedback on tfoot of completed courses (To remove or keep)
     - Fix styling of modal in progress form
     - Fix highlighting of date input when calendar button is pressed
+    - If tags increase too much then make it similar to course name field
+
+Nice colors for tag field:
+    B87FA3
+    2E294A
+    54A3B3
+    5C3B5B
+    374C7B
+    546C6C
+    A57C69
+    14BAA2
+    DAC487
+    F27458
