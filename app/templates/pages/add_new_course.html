@@ -36,7 +36,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Course details</div>
+                        <div class="card-title">Course Details</div>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -44,24 +44,26 @@
                             <div class="col-md-8 col-lg-6">
 
                                 <div class="form-group form-inline">
-                                    <label for="courseNameInput" class="col-md-3 col-form-label">Course Name</label>
+                                    <label for="courseNameInput" class="col-md-3 px-1 col-form-label">Course Name</label>
                                     <div class="col-md-9 p-0">
                                         <input type="text" class="form-control input-full" id="courseNameInput" placeholder="Introduction to Linear Algebra">
                                     </div>
                                 </div>
                                 <div class="form-group form-inline">
-                                    <label for="sourceInput" class="col-md-3 col-form-label">Source</label>
+                                    <label for="sourceInput" class="col-md-3 px-1 col-form-label">Source</label>
                                     <div class="col-md-9 p-0">
                                         <input type="text" class="form-control input-full" id="sourceInput" placeholder="Youtube">
                                     </div>
                                 </div>
 
                                 <div class="form-group form-inline">
-                                    <label for="durationForm" class="col-md-3 col-form-label">Duration</label>
+                                    <label for="durationForm" class="col-md-3 px-1 col-form-label">Duration</label>
                                     <div class="input-group col-md-9 p-0" id="durationForm">
-                                        <input type="number" class="form-control" aria-label="Text input with dropdown button" min="0" value="10">
-                                        <div class="input-group-append">
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                        <div class="col-md-6 m-0 p-0">
+                                            <input type="number" class="form-control input-full" aria-label="Text input with dropdown button" min="0" value="10">
+                                        </div>
+                                        <div class="input-group-append col-md-6 m-0 p-0">
+                                            <select class="form-control input-full" id="timeFormatInput">
                                                 <option>Hours</option>
                                                 <option>Weeks</option>
                                                 <option>Months</option>
@@ -70,60 +72,53 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-inline">
-                                    <label for="startDateInput" class="col-md-3 col-form-label">Start Date</label>
+                                    <label for="startDateInput" class="col-md-3 px-1 col-form-label">Start Date</label>
                                     <div class="col-md-9 p-0">
                                         <input type="date" class="form-control input-full" id="startDateInput" required>
                                     </div>
                                 </div>
                                 <div class="form-group form-inline">
-                                    <label for="deadlineInput" class="col-md-3 col-form-label">Deadline</label>
+                                    <label for="deadlineInput" class="col-md-3 px-1 col-form-label">Deadline</label>
                                     <div class="col-md-9 p-0">
                                         <input type="date" class="form-control input-full" id="deadlineInput" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group form-inline">
-                                    <label for="projectsInput" class="col-md-3 col-form-label">Projects</label>
+                                    <label for="projectsInput" class="col-md-3 px-1 col-form-label">Projects</label>
                                     <div class="col-md-9 p-0">
                                         <input type="number" class="form-control input-full" id="projectsInput" value="0" min="0">
                                     </div>
                                 </div>
 
-                                <div class="form-check form-inline">
-                                    <label class="col-md-3 col-form-label">Certificate Available</label><br/>
-                                    <div class="col-md-5 p-0">
-                                        <label class="form-radio-label">
-                                            <input class="form-radio-input" type="radio" name="optionsRadios" value=""  checked="">
-                                            <span class="form-radio-sign p-1">Yes</span>
-                                        </label>
-                                    </div>
-                                    <div class="col-md-4 p-0">
-                                        <label class="form-radio-label ml-3">
-                                            <input class="form-radio-input" type="radio" name="optionsRadios" value="">
-                                            <span class="form-radio-sign p-1">No</span>
-                                        </label>
+                                <div class="form-group form-inline">
+                                    <label class="col-md-3 px-1 form-label d-block">Certificate available</label>
+                                    <div class="col-md-9 p-0 d-flex justify-content-center">
+                                        <div class="selectgroup selectgroup-secondary selectgroup-pills">
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="icon-input" value="1" class="selectgroup-input" checked="">
+                                                <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-check"></i></span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="icon-input" value="2" class="selectgroup-input">
+                                                <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-times"></i></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
-
-
-
                                 <div class="form-group form-inline">
-                                    <label for="comment" class="col-md-3 col-form-label">Comments</label>
+                                    <label for="comment" class="col-md-3 px-1 col-form-label">Comments</label>
                                     <div class="col-md-9 p-0">
                                         <textarea class="form-control input-full" id="comment" rows="5" placeholder="Recommended by Gilbert Strang"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <!--
-                            <div class="col-md-6 col-lg-4">
-
-
-                            </div>
-                            -->
+<!--
                             <div class="col-md-6 col-lg-6">
-
+Maybe we can add a picture here
                             </div>
+-->
                         </div>
                     </div>
                     <div class="card-action">
