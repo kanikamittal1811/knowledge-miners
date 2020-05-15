@@ -1,8 +1,11 @@
-- Add daily reminder notification on the mobile devices. Enable notifications option.
-- Fix the max date of start date in course form
-- Rename view_progress.html to progress.html
-- Add tag in course form
-- Highlight the background rows of ongoing courses according to tag value. Should be able to blend with other components.
-- Create Add course option in view progress
-- Highlight the background rows of completed courses according to status
-- Feedback on tfoot of completed courses (To remove or keep)
+Himanshu:
+    - Add daily reminder notification on the mobile devices. Enable notifications option.
+    - Fix the max date of start date in course form
+    - Rename view_progress.html to progress.html
+    - Add tag in course form
+    - Highlight the background rows of ongoing courses according to tag value. Should be able to blend with other components.
+    - Create Add course option in view progress
+    - Highlight the background rows of completed courses according to status
+    - Feedback on tfoot of completed courses (To remove or keep)
+    - Fix styling of modal in progress form
+    - Fix highlighting of date input when calendar button is pressed

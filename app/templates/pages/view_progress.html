@@ -36,7 +36,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex align-items-center">
-                            <h3 class="card-title">Ongoing courses</h3>
+                            <h3 class="card-title">Ongoing Courses</h3>
                             <button class="btn btn-secondary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
                                 <i class="fa fa-plus"></i>
                                 Add Course
@@ -50,36 +50,82 @@
                                 <div class="modal-content">
                                     <div class="modal-header no-bd">
                                         <h5 class="modal-title">
-                                            <span class="fw-mediumbold">
-                                            New</span>
-                                            <span class="fw-light">
-                                                Row
-                                            </span>
+                                            <span class="fw-bold">
+                                            New Course</span>
                                         </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p class="small">Create a new row using this form, make sure you fill them all</p>
                                         <form>
                                             <div class="row">
-                                                <div class="col-sm-12">
+
+                                                <div class="col-12">
+
                                                     <div class="form-group form-group-default">
-                                                        <label>Name</label>
-                                                        <input id="addName" type="text" class="form-control" placeholder="fill name">
+                                                        <label for="courseNameInput" class="col-form-label">Course Name</label>
+                                                        <input type="text" class="form-control input-full" id="courseNameInput" placeholder="Introduction to Linear Algebra">
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6 pr-0">
                                                     <div class="form-group form-group-default">
-                                                        <label>Position</label>
-                                                        <input id="addPosition" type="text" class="form-control" placeholder="fill position">
+                                                        <label for="sourceInput" class="col-form-label">Source</label>
+                                                        <input type="text" class="form-control input-full" id="sourceInput" placeholder="Youtube">
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
+
                                                     <div class="form-group form-group-default">
-                                                        <label>Office</label>
-                                                        <input id="addOffice" type="text" class="form-control" placeholder="fill office">
+                                                        <label for="durationForm" class="col-form-label">Duration</label>
+                                                        <div class="input-group" id="durationForm">
+                                                            <input type="number" id="durationInput" class="form-control input-full" aria-label="Text input with dropdown button" min="0" value="10">
+                                                            <div class="input-group-append">
+                                                                <select class="form-control input-full" id="timeFormatInput">
+                                                                    <option>Hours</option>
+                                                                    <option>Weeks</option>
+                                                                    <option>Months</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-group-default">
+                                                        <label for="startDateInput" class="col-form-label">Start Date</label>
+
+                                                        <input type="date" class="form-control input-full" id="startDateInput" required>
+
+                                                    </div>
+                                                    <div class="form-group form-group-default">
+                                                        <label for="deadlineInput" class="col-form-label">Deadline</label>
+
+                                                        <input type="date" class="form-control input-full" id="deadlineInput" required>
+
+                                                    </div>
+
+                                                    <div class="form-group form-group-default">
+                                                        <label for="projectsInput" class="col-form-label">Projects</label>
+
+                                                        <input type="number" class="form-control input-full" id="projectsInput" value="0" min="0">
+
+                                                    </div>
+
+                                                    <div class="form-group form-group-default">
+                                                        <label class="form-label d-block">Certificate available</label>
+                                                        <div>
+                                                            <div class="selectgroup selectgroup-secondary selectgroup-pills">
+                                                                <label class="selectgroup-item">
+                                                                    <input type="radio" name="icon-input" value="1" class="selectgroup-input" checked="">
+                                                                    <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-check"></i></span>
+                                                                </label>
+                                                                <label class="selectgroup-item">
+                                                                    <input type="radio" name="icon-input" value="0" class="selectgroup-input">
+                                                                    <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-times"></i></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group form-group-default">
+                                                        <label for="commentsInput" class="col-form-label">Comments</label>
+
+                                                        <textarea class="form-control input-full" id="commentsInput" rows="5" placeholder="Recommended by Gilbert Strang"></textarea>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -550,7 +596,7 @@
 {% endblock content %}
 
 {% block javascripts %}
-
+    <script src="/static/assets/js/course_form.js"></script>
 	<script >
 		$(document).ready(function() {
 			$('#ongoing-courses-table').DataTable({
@@ -562,22 +608,18 @@
                 "oSearch": { "bCaseInsensitive": true, "bSmart": false, "bRegex": true, "sSearch": "" }
 			});
 
-			// Add Row
-			$('#add-row').DataTable({
-				"pageLength": 5,
-			});
-
-			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-warning btn-lg" data-original-title="View Details"> <i class="fa fa-info-circle"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-success" data-original-title="Mark as complete"> <i class="fa fa-edit"></i> </button> </div> </td>';
 
 			$('#addRowButton').click(function() {
-				$('#add-row').dataTable().fnAddData([
-					$("#addName").val(),
-					$("#addPosition").val(),
-					$("#addOffice").val(),
+				$('#ongoing-courses-table').dataTable().fnAddData([
+					$("#courseNameInput").val(),
+					$("#sourceInput").val(),
+					"Default Tag",
+                    $("#startDateInput").val(),
+                    $("#deadlineInput").val(),
 					action
 					]);
 				$('#addRowModal').modal('hide');
-
 			});
 		});
 	</script>
