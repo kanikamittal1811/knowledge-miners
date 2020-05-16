@@ -43,6 +43,7 @@ $("#submitCourseFormBtn").click(function(){
     console.log($("#startDateInput").val());
     console.log($("#deadlineInput").val());
     console.log($("#projectsInput").val());
+    console.log($('input[name="certificate-available"]:checked').val()); //This will give 1 for yes and 0 for no
     console.log($("#commentsInput").val());
 
 
