@@ -19,10 +19,8 @@ signupform.addEventListener('click', (e) => {
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         console.log(cred);
         credentials = cred;
-        // const modal = document.querySelector('#modal-signup');
-        // M.Modal.getInstance(modal).close();
-        // window.location.href = "../../../templates/pages/index.html";
-        signupform.reset();
+        window.location.href = "/";
+
     });
 })
 
