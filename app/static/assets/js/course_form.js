@@ -11,7 +11,7 @@ document.getElementById("deadlineInput").valueAsDate = tomorrow;
 //Handling tag hide/show
 $("#tagNameForm").hide();
 if ($("#tagInput").val()==defaultCustomTagValue) {
-    $("#tagNameForm").show();
+    $("#tagNameForm").show(800);
 }
 
 /*
@@ -25,13 +25,27 @@ DATABASE
 
 $("#tagInput").change(function(){
     if ($("#tagInput").val()==defaultCustomTagValue) {
-        $("#tagNameForm").show();
+        $("#tagNameForm").show(800);
     } else {
-        $("#tagNameForm").hide();
+        $("#tagNameForm").hide(200);
+        $("#tagNameInput").val("");
     }
 })
 
 $("#submitCourseFormBtn").click(function(){
+    //Checking working of all fields
+    console.log($("#courseNameInput").val());
+    console.log($("#sourceInput").val());
+    console.log($("#tagInput").val());
+    console.log($("#tagNameInput").val());
+    console.log($("#durationInput").val());
+    console.log($("#timeFormatInput").val());
+    console.log($("#startDateInput").val());
+    console.log($("#deadlineInput").val());
+    console.log($("#projectsInput").val());
+    console.log($("#commentsInput").val());
+
+
     if ($("#tagInput").val()==defaultCustomTagValue) {
         // Add a new tag to the database: DATABASE
     }
