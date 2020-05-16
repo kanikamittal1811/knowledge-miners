@@ -1,3 +1,19 @@
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1
 }
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background-image: url(https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/calendar-16.png);
+    background-position: center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    color: rgba(204,204,204,0);
+}
+/*
+input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    background-image: url("/static/assets/img/forms/cal-16-bw.jpg");
+}
+*/
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}

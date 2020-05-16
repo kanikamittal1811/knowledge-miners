@@ -1,12 +1,14 @@
 Himanshu:
     - Add daily reminder notification on the mobile devices. Enable notifications option.
+    - If number of tags increases too much then add auto complete to it
+
     - Fix the max date of start date in course form
     - Highlight the background rows of ongoing courses according to tag value. Should be able to blend with other components.
     - Highlight the background rows of completed courses according to status
     - Feedback on tfoot of completed courses (To remove or keep)
     - Fix styling of modal in progress form
-    - Fix highlighting of date input when calendar button is pressed
-    - If number of tags increases too much then make it similar to course name field
+    - Add fa icon as calendar icon in input date
+    - Add auto complete in course name
     - Need to fix the disable/enable and required in course form
     - Add tag in modal
 
