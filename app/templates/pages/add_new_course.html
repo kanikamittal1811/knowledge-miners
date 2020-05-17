@@ -1,10 +1,10 @@
 
 {% extends "layouts/default.html" %}
 
-{% block title %} Forms {% endblock title %}
+{% block title %} Add New Course {% endblock title %}
 
 {% block stylesheets %}
-
+<link rel="stylesheet" href="/static/assets/css/forms.css">
 {% endblock stylesheets %}
 
 {% block content %}
@@ -41,7 +41,7 @@
                     <div class="card-body">
                         <div class="row">
 
-                            <div class="col-md-8 col-lg-6">
+                            <div class="col-md-10 col-lg-8">
 
                                 <div class="form-group form-inline">
                                     <label for="courseNameInput" class="col-md-3 px-2 d-flex justify-content-start col-form-label">Course Name</label>
@@ -55,12 +55,31 @@
                                         <input type="text" class="form-control input-full" id="sourceInput" placeholder="Youtube">
                                     </div>
                                 </div>
+                                <div class="form-group form-inline">
+                                    <label for="tagInput" class="col-md-3 px-2 d-flex justify-content-start">Tag</label>
+                                    <div class="col-md-9 p-0">
+                                        <select class="form-control input-full" id="tagInput">
+                                            <option value="1">Machine Learning</option>
+                                            <option value="2">Blockchain</option>
+                                            <option value="3">Robotics</option>
+                                            <option value="4">Signal Processing</option>
+                                            <option value="0">Custom...</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-inline" id="tagNameForm">
+                                    <label for="tagNameInput" class="col-md-3 px-2 d-flex justify-content-start col-form-label">Tag Name</label>
+                                    <div class="input-group col-md-9 p-0">
+                                        <input type="text" class="form-control input-full" id="tagNameInput" placeholder="Custom Tag">
+                                    </div>
+                                </div>
 
                                 <div class="form-group form-inline">
                                     <label for="durationForm" class="col-md-3 px-2 d-flex justify-content-start col-form-label">Duration</label>
                                     <div class="input-group col-md-9 p-0" id="durationForm">
                                         <div class="col-md-6 m-0 p-0">
-                                            <input type="number" class="form-control input-full" aria-label="Text input with dropdown button" min="0" value="10">
+                                            <input type="number" class="form-control input-full" id="durationInput" aria-label="Text input with dropdown button" min="0" value="10">
                                         </div>
                                         <div class="input-group-append col-md-6 m-0 p-0">
                                             <select class="form-control input-full" id="timeFormatInput">
@@ -94,13 +113,13 @@
                                 <div class="form-group form-inline">
                                     <label class="col-md-3 px-2 d-flex justify-content-start form-label d-block">Certificate available</label>
                                     <div class="col-md-9 p-0 d-flex justify-content-center">
-                                        <div class="selectgroup selectgroup-secondary selectgroup-pills">
+                                        <div class="selectgroup selectgroup-secondary selectgroup-pills p-2">
                                             <label class="selectgroup-item">
-                                                <input type="radio" name="icon-input" value="1" class="selectgroup-input" checked="">
+                                                <input type="radio" name="certificate-available" value="1" class="selectgroup-input" checked="">
                                                 <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-check"></i></span>
                                             </label>
                                             <label class="selectgroup-item">
-                                                <input type="radio" name="icon-input" value="2" class="selectgroup-input">
+                                                <input type="radio" name="certificate-available" value="0" class="selectgroup-input">
                                                 <span class="selectgroup-button selectgroup-button-icon"><i class="fa fa-times"></i></span>
                                             </label>
                                         </div>
@@ -108,9 +127,9 @@
                                 </div>
 
                                 <div class="form-group form-inline">
-                                    <label for="comment" class="col-md-3 px-2 d-flex justify-content-start col-form-label">Comments</label>
+                                    <label for="commentsInput" class="col-md-3 px-2 d-flex justify-content-start col-form-label">Comments</label>
                                     <div class="col-md-9 p-0">
-                                        <textarea class="form-control input-full" id="comment" rows="5" placeholder="Recommended by Gilbert Strang"></textarea>
+                                        <textarea class="form-control input-full" id="commentsInput" rows="5" placeholder="Recommended by Gilbert Strang"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +141,7 @@ Maybe we can add a picture here
                         </div>
                     </div>
                     <div class="card-action">
-                        <button class="btn btn-success">Submit</button>
+                        <button class="btn btn-success" id="submitCourseFormBtn">Submit</button>
                         <button class="btn btn-danger">Cancel</button>
                     </div>
                 </div>
