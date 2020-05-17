@@ -123,7 +123,11 @@ var statisticsChart = new Chart(ctx, {
 				gridLines: {
 					drawTicks: false,
 					display: false
-				}
+				},
+				scaleLabel: {
+					display: true,
+					labelString: 'yLabel'
+				  }
 			}],
 			xAxes: [{
 				gridLines: {
@@ -132,7 +136,11 @@ var statisticsChart = new Chart(ctx, {
 				ticks: {
 					padding: 10,
 					fontStyle: "500"
-				}
+				},
+				scaleLabel: {
+					display: true,
+					labelString: 'xLabel'
+				  }
 			}]
 		},
 		legendCallback: function(chart) {
