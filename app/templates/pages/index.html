@@ -275,6 +275,14 @@
 
   <script>
 
+    $("#activeUsersChart").sparkline([112,109,120,107,110,85,87,90,102,109,120,99,110,85,87,94], {
+      type: 'bar',
+      height: '100',
+      barWidth: 9,
+      barSpacing: 10,
+      barColor: 'rgba(255,255,255,.3)'
+    });
+
     var lineChart = document.getElementById('lineChart').getContext('2d');
     var myLineChart = new Chart(lineChart, {
 			type: 'line',
@@ -357,16 +365,7 @@
 					}
 				}
 			}
-		});
-
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
-		});
+		});	
 	</script>
 
 {% endblock javascripts %}
