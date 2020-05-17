@@ -24,62 +24,32 @@
       </div>
     </div>
     <div class="page-inner mt--5">
-
       <div class="row mt--2">
         <div class="col-md-6">
           <div class="card full-height">
-            <div class="card-body">
-              <div class="card-title">Overall statistics</div>
-              <div class="card-category">Daily information about statistics in system</div>
-              <div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
-                <div class="px-2 pb-2 pb-md-0 text-center">
-                  <div class="chart-container">
-                        <canvas id="pieChart1" style="width: 50%; height: 50%"></canvas>
-                    </div>
-                  <h6 class="fw-bold mt-3 mb-0">New Users</h6>
-                </div>
-                <div class="px-2 pb-2 pb-md-0 text-center">
-                  <div class="chart-container">
-                    <canvas id="pieChart2" style="width: 50%; height: 50%"></canvas>
-                </div>
-                  <h6 class="fw-bold mt-3 mb-0">Sales</h6>
-                </div>
-                <div class="px-2 pb-2 pb-md-0 text-center">
-                  <div class="chart-container">
-                    <canvas id="pieChart3" style="width: 50%; height: 50%"></canvas>
-                </div>
-                  <h6 class="fw-bold mt-3 mb-0">Subscribers</h6>
-                </div>
+            <div class="card-header">
+              <div class="card-title">Line Chart</div>
+          </div>
+          <div class="card-body">
+              <div class="chart-container">
+                  <canvas id="lineChart"></canvas>
               </div>
-            </div>
+          </div>
           </div>
         </div>
         <div class="col-md-6">
           <div class="card full-height">
-            <div class="card-body">
-              <div class="card-title">Total income & spend statistics</div>
-              <div class="row py-3">
-                <div class="col-md-4 d-flex flex-column justify-content-around">
-                  <div>
-                    <h6 class="fw-bold text-uppercase text-success op-8">Total Income</h6>
-                    <h3 class="fw-bold">$9.782</h3>
-                  </div>
-                  <div>
-                    <h6 class="fw-bold text-uppercase text-danger op-8">Total Spend</h6>
-                    <h3 class="fw-bold">$1,248</h3>
-                  </div>
-                </div>
-                <div class="col-md-8">
-                  <div id="chart-container">
-                    <canvas id="totalIncomeChart"></canvas>
-                  </div>
-                </div>
+            <div class="card-header">
+              <div class="card-title">Pie Chart</div>
+          </div>
+          <div class="card-body">
+              <div class="chart-container">
+                  <canvas id="pieChart" style="width: 50%; height: 50%"></canvas>
               </div>
-            </div>
+          </div>
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-md-8">
           <div class="card">
@@ -110,11 +80,10 @@
             </div>
           </div>
         </div>
-        
         <div class="col-md-4">
           <div class="card full-height">
             <div class="card-header">
-              <div class="card-title">Feed Activity</div>
+              <div class="card-title">My Feed Activity</div>
             </div>
             <div class="card-body">
               <ol class="activity-feed">
@@ -147,12 +116,11 @@
           </div>  
         </div>
       </div>
-      
       <div class="row">
         <div class="col-md-4">
           <div class="card full-height">
             <div class="card-header">
-              <div class="card-title">Top Products</div>
+              <div class="card-title">Top Courses</div>
             </div>
             <div class="card-body pb-0">
               <div class="d-flex">
@@ -164,7 +132,7 @@
                   <small class="text-muted">Cascading Style Sheets</small>
                 </div>
                 <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+$17</h3>
+                  <h3 class="text-info fw-bold">+17</h3>
                 </div>
               </div>
               <div class="separator-dashed"></div>
@@ -177,7 +145,7 @@
                   <small class="text-muted">The Best Donuts</small>
                 </div>
                 <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+$300</h3>
+                  <h3 class="text-info fw-bold">+300</h3>
                 </div>
               </div>
               <div class="separator-dashed"></div>
@@ -190,7 +158,7 @@
                   <small class="text-muted">Bootstrap 4 Admin Dashboard</small>
                 </div>
                 <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+$350</h3>
+                  <h3 class="text-info fw-bold">+350</h3>
                 </div>
               </div>
               <div class="separator-dashed"></div>
@@ -305,92 +273,89 @@
 
 	<script src="/static/assets/js/demo.js"></script>
 
-	<script>	
-    
-    var ctxP1 = document.getElementById("piechart1").getContext('2d');
-    var myPieChart = new Chart(ctxP1, {
-      type: 'pie',
-      data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-        datasets: [{
-          data: [300, 50, 100, 40, 120],
-          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
+  <script>
 
-    var ctxP2 = document.getElementById("piechart2").getContext('2d');
-    var myPieChart = new Chart(ctxP2, {
-      type: 'pie',
-      data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-        datasets: [{
-          data: [300, 50, 100, 40, 120],
-          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-
-    var ctxP3 = document.getElementById("piechart3").getContext('2d');
-    var myPieChart = new Chart(ctxP3, {
-      type: 'pie',
-      data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-        datasets: [{
-          data: [300, 50, 100, 40, 120],
-          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-
-		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
-		var mytotalIncomeChart = new Chart(totalIncomeChart, {
-			type: 'bar',
+    var lineChart = document.getElementById('lineChart').getContext('2d');
+    var myLineChart = new Chart(lineChart, {
+			type: 'line',
 			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
-					label: "Total Income",
-					backgroundColor: '#ff9e27',
-					borderColor: 'rgb(23, 125, 255)',
-					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
-				}],
+				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				datasets: [{
+					label: "Active Users",
+					borderColor: "#1d7af3",
+					pointBorderColor: "#FFF",
+					pointBackgroundColor: "#1d7af3",
+					pointBorderWidth: 2,
+					pointHoverRadius: 4,
+					pointHoverBorderWidth: 1,
+					pointRadius: 4,
+					backgroundColor: 'transparent',
+					fill: true,
+					borderWidth: 2,
+					data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
+				}]
 			},
-			options: {
-				responsive: true,
+			options : {
+				responsive: true, 
 				maintainAspectRatio: false,
 				legend: {
-					display: false,
+					position: 'bottom',
+					labels : {
+						padding: 10,
+						fontColor: '#1d7af3',
+					}
 				},
-				scales: {
-					yAxes: [{
-						ticks: {
-							display: false //this will remove only the label
-						},
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}],
-					xAxes : [ {
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}]
+				tooltips: {
+					bodySpacing: 4,
+					mode:"nearest",
+					intersect: 0,
+					position:"nearest",
+					xPadding:10,
+					yPadding:10,
+					caretPadding:10
 				},
+				layout:{
+					padding:{left:15,right:15,top:15,bottom:15}
+				}
+			}
+    });
+  
+    pieChart = document.getElementById('pieChart').getContext('2d');
+    var myPieChart = new Chart(pieChart, {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [50, 35, 15],
+					backgroundColor :["#1d7af3","#f3545d","#fdaf4b"],
+					borderWidth: 0
+				}],
+				labels: ['New Visitors', 'Subscribers', 'Active Users'] 
+			},
+			options : {
+				responsive: true, 
+				maintainAspectRatio: false,
+				legend: {
+					position : 'bottom',
+					labels : {
+						fontColor: 'rgb(154, 154, 154)',
+						fontSize: 11,
+						usePointStyle : true,
+						padding: 20
+					}
+				},
+				pieceLabel: {
+					render: 'percentage',
+					fontColor: 'white',
+					fontSize: 14,
+				},
+				layout: {
+					padding: {
+						left: 20,
+						right: 20,
+						top: 20,
+						bottom: 20
+					}
+				}
 			}
 		});
 
