@@ -52,33 +52,17 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <div class="card">
+          <div class="card full-height">
             <div class="card-header">
-              <div class="card-head-row">
-                <div class="card-title">User Statistics</div>
-                <div class="card-tools">
-                  <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
-                    <span class="btn-label">
-                      <i class="fa fa-pencil"></i>
-                    </span>
-                    Export
-                  </a>
-                  <a href="#" class="btn btn-info btn-border btn-round btn-sm">
-                    <span class="btn-label">
-                      <i class="fa fa-print"></i>
-                    </span>
-                    Print
-                  </a>
-                </div>
-              </div>
+                <div class="card-title">Chart with HTML Legends</div>
             </div>
             <div class="card-body">
-              <div class="chart-container" style="min-height: 375px">
-                <canvas id="statisticsChart"></canvas>
-              </div>
-              <div id="myChartLegend"></div>
+                <div class="chart-container">
+                    <canvas id="htmlLegendsChart"></canvas>
+                </div>
+                <div id="myChartLegend"></div>
             </div>
-          </div>
+        </div>
         </div>
         <div class="col-md-4">
           <div class="card full-height">
@@ -116,171 +100,23 @@
           </div>  
         </div>
       </div>
-     <!-- <div class="row">
-        <div class="col-md-4">
-          <div class="card full-height">
-            <div class="card-header">
-              <div class="card-title">Top Courses</div>
-            </div>
-            <div class="card-body pb-0">
-              <div class="d-flex">
-                <div class="avatar">
-                  <img src="/static/assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <div class="flex-1 pt-1 ml-2">
-                  <h6 class="fw-bold mb-1">CSS</h6>
-                  <small class="text-muted">Cascading Style Sheets</small>
-                </div>
-                <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+17</h3>
-                </div>
-              </div>
-              <div class="separator-dashed"></div>
-              <div class="d-flex">
-                <div class="avatar">
-                  <img src="/static/assets/img/logoproduct.svg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <div class="flex-1 pt-1 ml-2">
-                  <h6 class="fw-bold mb-1">J.CO Donuts</h6>
-                  <small class="text-muted">The Best Donuts</small>
-                </div>
-                <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+300</h3>
-                </div>
-              </div>
-              <div class="separator-dashed"></div>
-              <div class="d-flex">
-                <div class="avatar">
-                  <img src="/static/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
-                </div>
-                <div class="flex-1 pt-1 ml-2">
-                  <h6 class="fw-bold mb-1">Ready Pro</h6>
-                  <small class="text-muted">Bootstrap 4 Admin Dashboard</small>
-                </div>
-                <div class="d-flex ml-auto align-items-center">
-                  <h3 class="text-info fw-bold">+350</h3>
-                </div>
-              </div>
-              <div class="separator-dashed"></div>
-              <div class="pull-in">
-                <canvas id="topProductsChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card full-height">
-            <div class="card-body">
-              <div class="card-title fw-mediumbold">Suggested People</div>
-              <div class="card-list">
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">Jimmy Denis</div>
-                    <div class="status">Graphic Designer</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/chadengle.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">Chad</div>
-                    <div class="status">CEO Zeleaf</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">Talha</div>
-                    <div class="status">Front End Designer</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/mlane.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">John Doe</div>
-                    <div class="status">Back End Developer</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/talha.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">Talha</div>
-                    <div class="status">Front End Designer</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-                <div class="item-list">
-                  <div class="avatar">
-                    <img src="/static/assets/img/jm_denis.jpg" alt="..." class="avatar-img rounded-circle">
-                  </div>
-                  <div class="info-user ml-3">
-                    <div class="username">Jimmy Denis</div>
-                    <div class="status">Graphic Designer</div>
-                  </div>
-                  <button class="btn btn-icon btn-primary btn-round btn-xs">
-                    <i class="fa fa-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card full-height card-primary bg-primary-gradient">
-            <div class="card-body">
-              <h4 class="mt-3 b-b1 pb-2 mb-4 fw-bold">Active user right now</h4>
-              <h1 class="mb-4 fw-bold">17</h1>
-              <h4 class="mt-3 b-b1 pb-2 mb-5 fw-bold">Page view per minutes</h4>
-              <div id="activeUsersChart"></div>
-              <h4 class="mt-5 pb-3 mb-0 fw-bold">Top active pages</h4>
-              <ul class="list-unstyled">
-                <li class="d-flex justify-content-between pb-1 pt-1"><small>/product/readypro/index.html</small> <span>7</span></li>
-                <li class="d-flex justify-content-between pb-1 pt-1"><small>/product/atlantis/demo.html</small> <span>10</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>-->
+     
     </div>
 
 {% endblock content %}
 
 {% block javascripts %}
 
-	<script src="/static/assets/js/demo.js"></script>
+	<!--<script src="/static/assets/js/demo.js"></script>-->
 
   <script>
 
     
 
-    var lineChart = document.getElementById('lineChart').getContext('2d');
+    var lC = document.getElementById('lineChart').getContext('2d');
     if(window.myLineChart != undefined) 
     window.myLineChart.destroy(); 
-    window.lineChart =new Chart(lineChart, {
+    window.lineChart =new Chart(lC, {
 			type: 'line',
 			data: {
 				labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -338,10 +174,10 @@
 			}
     });
   
-    pieChart = document.getElementById('pieChart').getContext('2d');
+    pC = document.getElementById('pieChart').getContext('2d');
     if(window.myPieChart != undefined) 
     window.myPieChart.destroy(); 
-    window.myPieChart =new Chart(pieChart, {
+    window.myPieChart =new Chart(pC, {
 			type: 'pie',
 			data: {
 				datasets: [{
@@ -379,10 +215,13 @@
 			}
     });	
     
-    var ctx = document.getElementById('statisticsChart').getContext('2d');
+   
+                    
+    var ctx = document.getElementById('htmlLegendsChart').getContext('2d');
     if(window.statisticsChart != undefined) 
     window.statisticsChart.destroy(); 
-    window.statisticsChart  = new Chart(ctx, {
+    
+    window.statisticsChart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -422,7 +261,7 @@
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: false,
+          display: false
         },
         tooltips: {
           bodySpacing: 4,
@@ -451,7 +290,7 @@
             scaleLabel: {
               display: true,
               labelString: 'yLabel'
-            }
+              }
           }],
           xAxes: [{
             gridLines: {
@@ -464,7 +303,7 @@
             scaleLabel: {
               display: true,
               labelString: 'xLabel'
-            }
+              }
           }]
         },
         legendCallback: function(chart) {
@@ -482,6 +321,17 @@
         }
       }
     });
+
+    var myLegendContainer = document.getElementById("myChartLegend");
+
+    // generate HTML legend
+    myLegendContainer.innerHTML = statisticsChart.generateLegend();
+
+    // bind onClick event to all LI-tags of the legend
+    var legendItems = myLegendContainer.getElementsByTagName('li');
+    for (var i = 0; i < legendItems.length; i += 1) {
+      legendItems[i].addEventListener("click", legendClickCallback, false);
+    }
 
 
 

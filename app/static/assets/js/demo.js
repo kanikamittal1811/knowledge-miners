@@ -170,7 +170,7 @@ for (var i = 0; i < legendItems.length; i += 1) {
 	legendItems[i].addEventListener("click", legendClickCallback, false);
 }
 
-var dailySalesChart = document.getElementById('dailySalesChart').getContext('2d');
+//var dailySalesChart = document.getElementById('dailySalesChart').getContext('2d');
 
 var myDailySalesChart = new Chart(dailySalesChart, {
 	type: 'line',
